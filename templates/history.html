@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+<!--Side bar--> 
+<div class="sidebar" id="sidebar">
+    <div id="sidebar-toggle">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div class="sidebar-content">
+        <a href="{{ url_for('dashboard') }}"><span>Dashboard</span></a>
+        <a href="{{ url_for('account') }}"><span>Account</span></a>
+        <a href="{{ url_for('vehicle_list') }}"><span>Vehicle</span></a>
+        <a href="{{ url_for('wallet') }}"><span>Reload</span></a>
+        <a href="{{ url_for('history') }}"><span>History</span></a>
+        <a href="{{ url_for('logout') }}"><span>Logout</span></a>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="container-centered">
+        <h2>Transaction History</h2>
+        <div class="history-sections">
+            <div class="history-column">
+                <h3>Reload History</h3>
+                <ul class="history-list">
+                    {% for reload in reload_history |reverse %} <!--Side bar--> 
+                    <li class="history-item">
+                        <div class="history-summary">
+                            RM{{ reload.amount }} on {{ reload.date }}
+                        </div>
+                        <div class="history-details">
+                            <p><strong>Amount:</strong> RM{{ reload.amount }}</p>
+                            <p><strong>Date:</strong> {{ reload.date }}</p>
+                            <p><strong>Status:</strong> Successful</p>
+                            <p><strong>Reference:</strong> {{ reload.reference }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="history-column">
+                <h3>Payment History</h3>
+                <ul class="history-list">
+                    {% for payment in payment_history |reverse %}
+                    <li class="history-item">
+                        <div class="history-summary">
+                            {{ payment.vehicle }} on {{ payment.date }}
+                        </div>
+                        <div class="history-details">
+                        <p><strong>Amount:</strong> RM{{ payment.amount }}</p>
+                        <p><strong>Location:</strong> {{ payment.location }}</p>
+                        <p><strong>Vehicle:</strong> {{ payment.vehicle }}</p> 
+                        <p><strong>Duration:</strong> {{ payment.duration }} hr(s)</p>
+                        <p><strong>Date:</strong> {{ payment.date }}</p>
+                        <p><strong>Status:</strong> Successful</p>
+                        <p><strong>Reference:</strong> {{ payment.reference }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+            <a href="{{ url_for('dashboard') }}" class="back-to-dashboard-link"> ← Back to Dashboard</a>
+
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
