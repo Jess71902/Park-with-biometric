@@ -1,0 +1,17 @@
+## ⚙️ Installation & Setup
+
+1. Clone the repository
+   git clone https://github.com/Jess71902/Parking_with_biometric.git
+   cd smart-parking-payment-system
+
+2. Setup enviornment on VS Code
+python -m venv venv
+source venv/bin/activate  # For Linux/Mac
+venv\Scripts\activate     # For Windows
+
+3. Install dependencies
+pip install -r requirements.txt
+
+4.flask run
+
+5. http://127.0.0.1:5000
