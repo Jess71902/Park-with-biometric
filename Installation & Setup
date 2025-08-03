@@ -1,5 +1,4 @@
 1. Installation & Setup
-
 - Clone the repository
 git clone https://github.com/Jess71902/Parking_with_biometric.git
 cd smart-parking-payment-system
@@ -11,6 +10,7 @@ venv\Scripts\activate     # For Windows
 python -m pip install
 - Install Required Libraries
 pip install -r requirements.txt
+
 
 2. Project structure:
 smart-parking-payment/
