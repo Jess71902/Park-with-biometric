@@ -5,3 +5,13 @@ face_recognition==1.3.0
 cmake>=3.22
 dlib==19.24.2
 Werkzeug==2.3.7
+
+
+#Note
+flask – Web framework for routing and rendering templates
+opencv-python – Captures webcam input and handles image processing
+numpy – Required by OpenCV and face recognition for numeric operations
+face_recognition – Face detection and matching library (built on dlib)
+cmake – Required to build dlib during installation
+dlib – Backend machine learning library used by face_recognition
+Werkzeug – Used internally by Flask for session and request management
