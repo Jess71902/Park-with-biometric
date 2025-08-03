@@ -9,9 +9,8 @@ python -m venv venv
 source venv/bin/activate  # For Linux/Mac
 venv\Scripts\activate     # For Windows
 
-3. Install dependencies
+3. Upgrade pip (Recommended)
+python -m pip install
+
+4. Install Required Libraries
 pip install -r requirements.txt
-
-4.flask run
-
-5. http://127.0.0.1:5000
