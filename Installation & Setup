@@ -1,16 +1,27 @@
-## ⚙️ Installation & Setup
+1. Installation & Setup
 
-1. Clone the repository
-   git clone https://github.com/Jess71902/Parking_with_biometric.git
-   cd smart-parking-payment-system
-
-2. Setup enviornment on VS Code
+- Clone the repository
+git clone https://github.com/Jess71902/Parking_with_biometric.git
+cd smart-parking-payment-system
+- Setup enviornment on VS Code
 python -m venv venv
 source venv/bin/activate  # For Linux/Mac
 venv\Scripts\activate     # For Windows
-
-3. Upgrade pip (Recommended)
+- Upgrade pip (Recommended)
 python -m pip install
-
-4. Install Required Libraries
+- Install Required Libraries
 pip install -r requirements.txt
+
+2. Project structure:
+smart-parking-payment/
+│
+├── app.py               # Main Flask application
+├── logic.py             # Face recognition & command validation logic
+├── requirements.txt     # Python dependencies
+├── blacklist.txt        # Malicious pattern list
+│
+├── templates/           # HTML templates (index.html, dashboard.html, etc.)
+├── static/              # CSS, JavaScript, image assets
+│   ├── style.css
+│   └── script.js
+└── README.md            # Project overview
