@@ -15,13 +15,25 @@ pip install -r requirements.txt
 2. Project structure:
 smart-parking-payment/
 │
-├── app.py               # Main Flask application
-├── logic.py             # Face recognition & command validation logic
+├── main.py               # Main Flask application
+├── auth.py             # Face recognition & command validation logic
 ├── requirements.txt     # Python dependencies
-├── blacklist.txt        # Malicious pattern list
+├── user.txt
 │
-├── templates/           # HTML templates (index.html, dashboard.html, etc.)
+├── templates/           # HTML templates
+    ├── account.html
+    ├── dashboard.html
+    ├── face_login.html
+    ├── history.html
+    ├── index.html
+    ├── logout.html
+    ├── register.html
+    ├── reset.html
+    ├── vehicle_list.html
+    └── wallet.html
 ├── static/              # CSS, JavaScript, image assets
-│   ├── style.css
+    ├── face_icon,png
+    ├── capture.js
+    ├── style.css
 │   └── script.js
 └── README.md            # Project overview
